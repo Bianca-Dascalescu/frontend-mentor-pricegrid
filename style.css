@@ -6,6 +6,18 @@
     padding: 0;
 }
 
+#container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.secondContainer{
+    display: flex;
+    
+}
+
 #title{
     color:hsl(179, 62%, 43%);
     margin-bottom: 20px;
@@ -47,16 +59,19 @@ color: white;
 
 #details-list{
 color: white;
+list-style: none;
 }
 
 /* second-item */
 #second-item{
     background-color: hsl(179, 62%, 43%);
+    padding: 20px;
 }
  
 /* third-item */
 #third-item{
     background-color: hsl(179, 57%, 49%);
+    padding: 20px;
 }
 
 /* media-query */
