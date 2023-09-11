@@ -6,69 +6,89 @@
     padding: 0;
 }
 
+/* general container */
+
 #container{
     display: flex;
-    flex-direction: column;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-
-.secondContainer{
-    display: flex;
-    
-}
+ /* general properties and values applicable for both mobile and desktop design*/
 
 #title{
     color:hsl(179, 62%, 43%);
-    margin-bottom: 20px;
+    margin: 20px;
 }
 
 #sub-title{
     color: hsl(71, 73%, 54%);
-    margin-bottom: 20px;
+    margin: 20px;
 }
 
 #paragraph{
     color: hsl(204, 7%, 71%);
+    margin: 20px;
 }
 
 #subscription-text{
     color: white;
-}
-#price{
-color: white;
+    margin: 20px;
 }
 
-#period{
-color: rgb(213, 203, 203);
+#price{
+    color: white;
+    margin: 20px;
+    display: inline;
+}
+
+#period-of-time{
+    color: rgb(213, 203, 203);
+    display: inline;
 }
 
 #sub-price{
     color: white;
+    margin: 20px;
 }
 
 #signup-button{
     background-color:hsl(71, 73%, 54%);
     color: white;
     border: none;
+    font-size: 18px;
+    width: 90%;
+    height: 50px;
+    border-radius: 5px;
+}
+
+#signup-button:hover{
+    background-color:hsl(71, 84%, 55%);
 }
 
 #details{
-color: white;
+    color: white;
+    margin: 20px;
 }
 
 #details-list{
-color: white;
-list-style: none;
+    color: white;
+    list-style: none;
+    margin: 20px;
 }
 
-/* second-item */
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
 #second-item{
     background-color: hsl(179, 62%, 43%);
     padding: 20px;
 }
- 
-/* third-item */
+
 #third-item{
     background-color: hsl(179, 57%, 49%);
     padding: 20px;
@@ -76,9 +96,52 @@ list-style: none;
 
 /* media-query */
 
+/* mobile */
+
+@media(max-width: 375px){
+
+#inside-container{
+    padding: 20px;
+    margin-top: 70px;
+}
+
+#first-item{
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    }
+}
 
 
 /* desktop */
 
+@media(min-width: 376px){
+/* first item/container */
+/* set the dimesions of the 3 containers */
 
-/* mobile */
+#first-item{
+    width: 600px;
+    height: 200px;
+    margin-top: 50px;
+}
+
+#second-item, #third-item{
+    width: 300px;
+    height: 250px;
+}
+
+/* second-item/container */
+
+.secondContainer{
+    display: flex;   
+}
+
+#inside-container {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 10px; 
+  }
+}
+
+
+
