@@ -1,147 +1,144 @@
-
-/* general */
-
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-/* general container */
-
-#container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+#container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
- /* general properties and values applicable for both mobile and desktop design*/
-
-#title{
-    color:hsl(179, 62%, 43%);
-    margin: 20px;
+#sub-container {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 20px;
+  /* background-color: lightgray; Optional background color for visualization */
 }
 
-#sub-title{
-    color: hsl(71, 73%, 54%);
-    margin: 20px;
+#sub-container {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-#paragraph{
-    color: hsl(204, 7%, 71%);
-    margin: 20px;
+#second-container {
+  flex-grow: 1;
 }
 
-#subscription-text{
-    color: white;
-    margin: 20px;
+@media (min-width: 768px) {
+}
+/* General: colors and margins */
+#title,
+#sub-title,
+.paragraph,
+#subscription-text,
+#price,
+#period-of-time,
+#sub-price,
+#details {
+  /* margin: 10px;
+  color: white; */
 }
 
-#price{
-    color: white;
-    margin: 20px;
-    display: inline;
+#title {
+  color: hsl(179, 62%, 43%);
+  margin: 20px;
 }
 
-#period-of-time{
-    color: rgb(213, 203, 203);
-    display: inline;
+#sub-title {
+  color: hsl(71, 73%, 54%);
+  margin: 20px;
 }
 
-#sub-price{
-    color: white;
-    margin: 20px;
+.paragraph {
+  color: hsl(204, 7%, 71%);
+  margin: 10px;
+}
+#subscription-text {
+  color: white;
+}
+#price,
+#period-of-time {
+  display: inline;
+}
+#price {
+  color: white;
+}
+#period-of-time {
+  color: rgb(213, 203, 203);
+}
+#sub-price {
+  color: white;
 }
 
-#signup-button{
-    background-color:hsl(71, 73%, 54%);
-    color: white;
-    border: none;
-    font-size: 18px;
-    width: 90%;
-    height: 50px;
-    border-radius: 5px;
+#signup-button {
+  background-color: hsl(71, 73%, 54%);
+  color: white;
+  border: none;
+  font-size: 18px;
+  width: 90%;
+  height: 50px;
+  border-radius: 5px;
 }
 
-#signup-button:hover{
-    background-color:hsl(71, 84%, 55%);
+#signup-button:hover {
+  background-color: hsl(71, 84%, 55%);
 }
 
-#details{
-    color: white;
-    margin: 20px;
+#details-list {
+  color: white;
+  list-style: none;
+  margin: 20px;
 }
 
-#details-list{
-    color: white;
-    list-style: none;
-    margin: 20px;
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
-ul{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+#second-item {
+  background-color: hsl(179, 62%, 43%);
+  padding: 20px;
+}
+#third-item {
+  background-color: hsl(179, 57%, 49%);
+  padding: 20px;
 }
 
-#second-item{
-    background-color: hsl(179, 62%, 43%);
-    padding: 20px;
-}
-
-#third-item{
-    background-color: hsl(179, 57%, 49%);
-    padding: 20px;
-}
-
-/* media-query */
+/* media queries */
 
 /* mobile */
-
-@media(max-width: 375px){
-
-#inside-container{
+@media (max-width: 400px) {
+  body {
     padding: 20px;
-    margin-top: 70px;
-}
+  }
 
-#first-item{
-    width: 100%;
-    height: 200px;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    }
-}
-
-
-/* desktop */
-
-@media(min-width: 376px){
-/* first item/container */
-/* set the dimesions of the 3 containers */
-
-#first-item{
-    width: 600px;
-    height: 200px;
-    margin-top: 50px;
-}
-
-#second-item, #third-item{
-    width: 300px;
-    height: 250px;
-}
-
-/* second-item/container */
-
-.secondContainer{
-    display: flex;   
-}
-
-#inside-container {
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); 
-    border-radius: 10px; 
+  #first-item,
+  #second-item,
+  #third-item {
+    display: block;
   }
 }
 
+/* desktop */
 
+@media (min-width: 401px) {
+  #first-item {
+    flex: 1; /* Takes up available space, pushing part 2 and part 3 down */
+    display: inline-flex;
+    flex-direction: column;
+  }
 
+  /* flex containers */
+  #second-container {
+    display: flex;
+  }
+
+  /* it takes space equally  */
+  #second-item,
+  #third-item {
+    flex: 1;
+  }
+}
