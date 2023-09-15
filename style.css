@@ -14,11 +14,6 @@
 #sub-container {
   display: inline-flex;
   flex-direction: column;
-  padding: 20px;
-  /* background-color: lightgray; Optional background color for visualization */
-}
-
-#sub-container {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -26,20 +21,17 @@
   flex-grow: 1;
 }
 
-@media (min-width: 768px) {
-}
 /* General: colors and margins */
-#title,
-#sub-title,
-.paragraph,
-#subscription-text,
-#price,
-#period-of-time,
-#sub-price,
-#details {
-  /* margin: 10px;
-  color: white; */
+#second-item {
+  background-color: hsl(179, 62%, 43%);
+  padding: 20px;
 }
+#third-item {
+  background-color: hsl(179, 57%, 49%);
+  padding: 20px;
+}
+
+/* elements from top to bottom */
 
 #title {
   color: hsl(179, 62%, 43%);
@@ -53,24 +45,46 @@
 
 .paragraph {
   color: hsl(204, 7%, 71%);
-  margin: 10px;
+  margin: 20px;
 }
+
 #subscription-text {
   color: white;
 }
+/* SECOND CONTAINER */
 #price,
 #period-of-time {
-  display: inline;
+  /* display: inline; */
 }
+
+#price-container {
+  display: flex; /* Create a horizontal flex container for the price */
+  align-items: flex-end; /* Align the price to the baseline */
+  margin-right: 5px; /* Adjust the spacing between the price and "per month" */
+}
+
 #price {
   color: white;
+  font-weight: bold;
+  font-size: 30px;
 }
+
 #period-of-time {
   color: rgb(213, 203, 203);
+  font-size: 18px; /* Adjust the font size as needed */
+  color: gray; /* Color for "per month" text */
+  margin-left: 5px; /* Adjust the spacing between the price and "per month" */
+}
+
+.price {
 }
 #sub-price {
   color: white;
 }
+
+/* end of price section */
+
+/* button */
 
 #signup-button {
   background-color: hsl(71, 73%, 54%);
@@ -78,12 +92,20 @@
   border: none;
   font-size: 18px;
   width: 90%;
+  max-width: 300px;
   height: 50px;
   border-radius: 5px;
+  padding: 10px 20px;
 }
 
 #signup-button:hover {
   background-color: hsl(71, 84%, 55%);
+}
+
+/* 3rd container, details */
+#details {
+  color: white;
+  margin: 20px;
 }
 
 #details-list {
@@ -98,15 +120,6 @@ ul {
   gap: 5px;
 }
 
-#second-item {
-  background-color: hsl(179, 62%, 43%);
-  padding: 20px;
-}
-#third-item {
-  background-color: hsl(179, 57%, 49%);
-  padding: 20px;
-}
-
 /* media queries */
 
 /* mobile */
@@ -119,6 +132,12 @@ ul {
   #second-item,
   #third-item {
     display: block;
+  }
+
+  #second-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 }
 
