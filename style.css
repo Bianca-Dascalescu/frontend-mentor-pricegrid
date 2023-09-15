@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 #container {
@@ -9,6 +10,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-family: "Karla", sans-serif;
 }
 
 #sub-container {
@@ -22,10 +24,12 @@
 }
 
 /* General: colors and margins */
+
 #second-item {
   background-color: hsl(179, 62%, 43%);
   padding: 20px;
 }
+
 #third-item {
   background-color: hsl(179, 57%, 49%);
   padding: 20px;
@@ -35,49 +39,33 @@
 
 #title {
   color: hsl(179, 62%, 43%);
-  margin: 20px;
 }
 
 #sub-title {
   color: hsl(71, 73%, 54%);
-  margin: 20px;
+  padding-bottom: 15px;
 }
 
 .paragraph {
   color: hsl(204, 7%, 71%);
-  margin: 20px;
 }
+
+/* SECOND CONTAINER */
 
 #subscription-text {
   color: white;
 }
-/* SECOND CONTAINER */
-#price,
-#period-of-time {
-  /* display: inline; */
-}
-
-#price-container {
-  display: flex; /* Create a horizontal flex container for the price */
-  align-items: flex-end; /* Align the price to the baseline */
-  margin-right: 5px; /* Adjust the spacing between the price and "per month" */
-}
 
 #price {
+  color: rgb(221, 213, 213);
+}
+
+#price span {
   color: white;
-  font-weight: bold;
-  font-size: 30px;
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 
-#period-of-time {
-  color: rgb(213, 203, 203);
-  font-size: 18px; /* Adjust the font size as needed */
-  color: gray; /* Color for "per month" text */
-  margin-left: 5px; /* Adjust the spacing between the price and "per month" */
-}
-
-.price {
-}
 #sub-price {
   color: white;
 }
@@ -91,11 +79,10 @@
   color: white;
   border: none;
   font-size: 18px;
-  width: 90%;
-  max-width: 300px;
-  height: 50px;
+  width: 100%;
   border-radius: 5px;
-  padding: 10px 20px;
+  padding: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 #signup-button:hover {
@@ -105,13 +92,11 @@
 /* 3rd container, details */
 #details {
   color: white;
-  margin: 20px;
 }
 
 #details-list {
   color: white;
   list-style: none;
-  margin: 20px;
 }
 
 ul {
@@ -123,7 +108,7 @@ ul {
 /* media queries */
 
 /* mobile */
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   body {
     padding: 20px;
   }
