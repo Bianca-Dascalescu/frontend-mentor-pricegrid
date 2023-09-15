@@ -36,6 +36,9 @@
 }
 
 /* elements from top to bottom */
+#first-item {
+  padding: 50px;
+}
 
 #title {
   color: hsl(179, 62%, 43%);
@@ -43,21 +46,26 @@
 
 #sub-title {
   color: hsl(71, 73%, 54%);
-  padding-bottom: 15px;
+  margin-top: 20px;
 }
 
 .paragraph {
   color: hsl(204, 7%, 71%);
+  margin-top: 10px;
 }
 
 /* SECOND CONTAINER */
 
+#second-item {
+  padding: 50px;
+}
 #subscription-text {
   color: white;
 }
 
 #price {
   color: rgb(221, 213, 213);
+  margin-top: 15px;
 }
 
 #price span {
@@ -68,6 +76,8 @@
 
 #sub-price {
   color: white;
+  white-space: nowrap;
+  margin-top: 10px;
 }
 
 /* end of price section */
@@ -83,6 +93,7 @@
   border-radius: 5px;
   padding: 15px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 40px;
 }
 
 #signup-button:hover {
@@ -90,12 +101,17 @@
 }
 
 /* 3rd container, details */
+#third-item {
+  padding: 50px;
+}
+
 #details {
   color: white;
+  padding-bottom: 20px;
 }
 
 #details-list {
-  color: white;
+  color: rgb(240, 235, 235);
   list-style: none;
 }
 
